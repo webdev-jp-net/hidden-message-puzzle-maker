@@ -3,30 +3,30 @@ description:
 globs: 
 alwaysApply: false
 ---
-# Text to Image Generation Specifications
+# テキスト画像生成仕様
 
-## Font Configuration
-- Font: Murecho Bold (Weight 700)
-- Source: `@fontsource/murecho` package
-- Size: 18px
+## フォント設定
+- フォント: Murecho Bold（ウェイト700）
+- ソース: `@fontsource/murecho` パッケージ
+- サイズ: 18px
 
-## Layout Specifications
-- Characters per line: 18
-- Character width: 18px
-- Line height: 40px (1.2x font size)
-- Margins: 36px (all sides)
+## レイアウト仕様
+- 1行あたりの文字数: 18文字
+- 文字幅: 18px
+- 行の高さ: 40px（フォントサイズの1.2倍）
+- 余白: 四辺すべて36px
 
-## Color Scheme
-- Default text: Black (#000000)
-- Hint text: Red (#FF0000)
-- Answer text: Blue (#0000FF)
-- Background: White (#FFFFFF)
+## カラースキーム
+- 通常テキスト: 黒（#000000）
+- ヒントテキスト: 赤（#FF0000）
+- 解答テキスト: 青（#0000FF）
+- 背景: 白（#FFFFFF）
 
-## Implementation File
-Main implementation in [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts)
+## 実装ファイル
+主な実装は [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts) に記載
 
-## Dependencies
-Required in [package.json](mdc:package.json):
+## 依存パッケージ
+[package.json](mdc:package.json) に以下が必要です:
 - `@fontsource/murecho`
 - `canvas`
 

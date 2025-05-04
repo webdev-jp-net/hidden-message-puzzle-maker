@@ -3,34 +3,36 @@ description:
 globs: 
 alwaysApply: true
 ---
-# Tools Directory Structure Guide
+# ツールディレクトリ構成ガイド
 
-The tools directory contains specialized tools for various text and image processing tasks.
+このプロジェクトの `tools` ディレクトリには、テキスト処理や画像処理など、さまざまな専用ツールを格納します。
 
-## Directory Structure
-```src/mastra/tools/```
-- Contains tool implementations
-- Each tool should be in a separate file with `-tool.ts` suffix
-- `index.ts` exports all tools
+## ディレクトリ構成
+```
+src/mastra/tools/
+```
+- ツールの実装ファイルを配置します
+- 各ツールは `-tool.ts` という名前で個別ファイルにします
+- `index.ts` で全ツールをまとめてエクスポートします
 
-## Tool Files
-- [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts): Text to image conversion tool
-- [anagram-tool.ts](mdc:src/mastra/tools/anagram-tool.ts): Anagram generation tool
-- [index.ts](mdc:src/mastra/tools/index.ts): Tool exports
+## ツールファイル例
+- [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts): テキストを画像に変換するツール
+- [anagram-tool.ts](mdc:src/mastra/tools/anagram-tool.ts): アナグラム（文字並べ替え）生成ツール
+- [index.ts](mdc:src/mastra/tools/index.ts): ツールのエクスポート用ファイル
 
-## Naming Conventions
-- Tool files: `feature-tool.ts` format
-- Tool IDs: `feature-action` format in kebab-case
-- Tool classes: `FeatureToolName` in PascalCase
+## 命名規則
+- ツールファイル名は `機能名-tool.ts` とします
+- ツールIDはケバブケース（例: `feature-action`）で記述します
+- ツールクラス名はパスカルケース（例: `FeatureToolName`）で記述します
 
-## Implementation Guidelines
-1. Each tool must use `createTool` from `@mastra/core/tools`
-2. Define input/output schemas using `zod`
-3. Include clear description in tool metadata
-4. Export tool instance from `index.ts`
+## 実装ガイドライン
+1. すべてのツールは `@mastra/core/tools` の `createTool` を使って実装します
+2. 入力・出力のスキーマは `zod` で定義します
+3. ツールの説明文（description）は分かりやすく記載します
+4. 作成したツールは `index.ts` からエクスポートします
 
-## Dependencies
-Required packages should be listed in [package.json](mdc:package.json):
+## 依存パッケージ
+必要なパッケージは [package.json](mdc:package.json) に記載してください。
 - `@mastra/core`
 - `zod`
-- Feature-specific dependencies (e.g., `canvas` for image generation)
+- 機能ごとの追加パッケージ（例: 画像生成には `canvas` など）
