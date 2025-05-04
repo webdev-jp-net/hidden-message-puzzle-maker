@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# Tools Directory Structure Guide
+
+The tools directory contains specialized tools for various text and image processing tasks.
+
+## Directory Structure
+```src/mastra/tools/```
+- Contains tool implementations
+- Each tool should be in a separate file with `-tool.ts` suffix
+- `index.ts` exports all tools
+
+## Tool Files
+- [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts): Text to image conversion tool
+- [anagram-tool.ts](mdc:src/mastra/tools/anagram-tool.ts): Anagram generation tool
+- [index.ts](mdc:src/mastra/tools/index.ts): Tool exports
+
+## Naming Conventions
+- Tool files: `feature-tool.ts` format
+- Tool IDs: `feature-action` format in kebab-case
+- Tool classes: `FeatureToolName` in PascalCase
+
+## Implementation Guidelines
+1. Each tool must use `createTool` from `@mastra/core/tools`
+2. Define input/output schemas using `zod`
+3. Include clear description in tool metadata
+4. Export tool instance from `index.ts`
+
+## Dependencies
+Required packages should be listed in [package.json](mdc:package.json):
+- `@mastra/core`
+- `zod`
+- Feature-specific dependencies (e.g., `canvas` for image generation)

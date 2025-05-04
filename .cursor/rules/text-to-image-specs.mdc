@@ -1,0 +1,32 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Text to Image Generation Specifications
+
+## Font Configuration
+- Font: Murecho Bold (Weight 700)
+- Source: `@fontsource/murecho` package
+- Size: 18px
+
+## Layout Specifications
+- Characters per line: 18
+- Character width: 18px
+- Line height: 40px (1.2x font size)
+- Margins: 36px (all sides)
+
+## Color Scheme
+- Default text: Black (#000000)
+- Hint text: Red (#FF0000)
+- Answer text: Blue (#0000FF)
+- Background: White (#FFFFFF)
+
+## Implementation File
+Main implementation in [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts)
+
+## Dependencies
+Required in [package.json](mdc:package.json):
+- `@fontsource/murecho`
+- `canvas`
+
