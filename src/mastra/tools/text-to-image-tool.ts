@@ -34,8 +34,8 @@ export const textToImageTool = createTool({
     const width = CHAR_WIDTH * CHARS_PER_LINE + MARGIN * 2;
     const height = LINE_HEIGHT * lines + MARGIN * 2;
 
-    let svg = `<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"${width}\" height=\"${height}\" style=\"background:#fff\">`;
-    svg += `<rect width=\"100%\" height=\"100%\" fill=\"#fff\"/>`;
+    let svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" style="background:#fff">`;
+    svg += `<rect width="100%" height="100%" fill="#fff"/>`;
 
     let x = MARGIN;
     let y = MARGIN;
@@ -49,7 +49,7 @@ export const textToImageTool = createTool({
           y += LINE_HEIGHT;
           currentLineChars = 0;
         }
-        svg += `<text x=\"${x}\" y=\"${y + FONT_SIZE}\" font-family=\"${FONT_FAMILY}\" font-weight=\"${FONT_WEIGHT}\" font-size=\"${FONT_SIZE}\" fill=\"${color}\">${char}</text>`;
+        svg += `<text x="${x}" y="${y + FONT_SIZE}" font-family="${FONT_FAMILY}" font-weight="${FONT_WEIGHT}" font-size="${FONT_SIZE}" fill="${color}">${char}</text>`;
         x += CHAR_WIDTH;
         currentLineChars++;
       }
