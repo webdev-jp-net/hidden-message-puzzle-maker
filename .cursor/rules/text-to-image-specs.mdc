@@ -28,5 +28,7 @@ alwaysApply: false
 ## 依存パッケージ
 [package.json](mdc:package.json) に以下が必要です:
 - `@fontsource/murecho`
-- `canvas`
+
+## 注意
+- 画像生成はSVG形式で行い、システム依存パッケージは使用しません。
 
