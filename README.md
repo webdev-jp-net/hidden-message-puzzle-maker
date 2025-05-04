@@ -33,5 +33,3 @@ http://localhost:4111/ が起動します
 ```sh
 pnpm build
 ```
-
-- SVG画像を出力するツールの結果は、mastraのチャットUI上で自動的に画像プレビューされます。
