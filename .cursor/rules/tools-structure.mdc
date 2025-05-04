@@ -17,7 +17,6 @@ src/mastra/tools/
 
 ## ツールファイル例
 - [text-to-image-tool.ts](mdc:src/mastra/tools/text-to-image-tool.ts): テキストを画像に変換するツール
-- [anagram-tool.ts](mdc:src/mastra/tools/anagram-tool.ts): アナグラム（文字並べ替え）生成ツール
 - [index.ts](mdc:src/mastra/tools/index.ts): ツールのエクスポート用ファイル
 
 ## 命名規則
@@ -36,3 +35,6 @@ src/mastra/tools/
 - `@mastra/core`
 - `zod`
 - 機能ごとの追加パッケージ（例: 画像生成には `canvas` など）
+
+## 注意
+- システム依存パッケージの禁止など、プロジェクト全体のルールについては [project-rules.mdc](mdc:.cursor/rules/project-rules.mdc) を参照してください。
